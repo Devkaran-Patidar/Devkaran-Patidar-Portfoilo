@@ -1,4 +1,108 @@
 // ============================
+// Dynamic Projects Rendering
+// ============================
+const projectsData = [
+  {
+    type: "Full Stack Web App",
+    title: "Agromart Platform",
+    description: "Direct market access for farmers and consumers. A comprehensive full-stack solution allowing seamless transactions, produce tracking, and secure authentication to bridge the gap in agricultural commerce.",
+    tech: ["React", "Django", "JWT", "Cloudinary", "PostgreSQL"],
+    mediaType: "image",
+    mediaSrc: "./Images/Projects/images/agromart.png",
+    liveUrl: "https://agromart-ad69.onrender.com/",
+    sourceUrl: "https://github.com/Devkaran-Patidar/FarmerApp-Frontend"
+  },
+  {
+    type: "Algo Analyzer",
+    title: "Premium Algorithm Visualizer",
+    description: "A sophisticated tool for visualizing and analyzing algorithms in real-time, providing insights into their performance and behavior.",
+    tech: ["React", "ReCharts", "Django", "REST API"],
+    mediaType: "image",
+    mediaSrc: "./Images/Projects/images/algoanalyzer.png",
+    liveUrl: "https://news-app-example.onrender.com/",
+    sourceUrl: "https://github.com/Devkaran-Patidar/AlgoAnalyzer"
+  },
+  // {
+  //   type: "AI Chatbot",
+  //   title: "Smart AI Assistant",
+  //   description: "A conversational AI chatbot built with React and integrated with a powerful backend for natural language processing.",
+  //   tech: ["React", "Django", "REST API"],
+  //   mediaType: "image",
+  //   mediaSrc: "./Images/Projects/images/aichatbot.png",
+  //   liveUrl: "https://news-app-example.onrender.com/",
+  //   sourceUrl: "https://github.com/Devkaran-Patidar/AlgoAnalyzer"
+  // },
+  {
+    type: "Frontend Application",
+    title: "Global News Aggregator",
+    description: "A dynamic news application that fetches and displays the latest articles from multiple global sources. Features categorical filtering and a responsive reading experience.",
+    tech: ["HTML5", "CSS3", "JavaScript", "REST API"],
+    mediaType: "image",
+    mediaSrc: "./Images/Projects/images/newsApp.png",
+    liveUrl: "https://news-app-example.onrender.com/",
+    sourceUrl: "https://github.com/Devkaran-Patidar/NewsApp"
+  },
+  {
+    type: "Web Game",
+    title: "Interactive Tic-Tac-Toe",
+    description: "A classic Tic Tac Toe game with modern UI elements, implemented purely with vanilla web technologies. Focuses on state management and game logic.",
+    tech: ["HTML5", "CSS3", "Vanilla JS"],
+    mediaType: "image",
+    mediaSrc: "./Images/Projects/images/tic toc toe.png",
+    liveUrl: "#",
+    sourceUrl: "#"
+  }
+];
+
+const projectsContainer = document.getElementById("projects-container");
+
+if (projectsContainer) {
+  let projectsHTML = "";
+  projectsData.forEach((project, index) => {
+    // Alternate rows by adding 'reversed' class to every odd index
+    const reversedClass = index % 2 !== 0 ? "reversed" : "";
+    
+    // Generate tech stack tags
+    const techHTML = project.tech.map(t => `<span>${t}</span>`).join('');
+    
+    // Generate media HTML
+    let mediaHTML = "";
+    if (project.mediaType === "video") {
+      mediaHTML = `<video src="${project.mediaSrc}" class="project-img" muted loop autoPlay></video>`;
+    } else {
+      mediaHTML = `<img src="${project.mediaSrc}" alt="${project.title}" class="project-img">
+                  `;
+    }
+
+    projectsHTML += `
+      <div class="project-feature ${reversedClass} fade-in">
+        <div class="project-media">
+          <div class="media-container">
+            ${mediaHTML}
+          </div>
+        </div>
+        <div class="project-content">
+          <span class="project-type">${project.type}</span>
+          <h3 class="project-title">${project.title}</h3>
+          <div class="project-desc">
+            <p>${project.description}</p>
+          </div>
+          <div class="project-tech">
+            ${techHTML}
+          </div>
+          <div class="project-links">
+            <a href="${project.liveUrl}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live demo ↗</a>
+            <a href="${project.sourceUrl}" target="_blank" rel="noopener" class="project-github" title="Source Code"><i class="fa-brands fa-github"></i> Source</a>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  
+  projectsContainer.innerHTML = projectsHTML;
+}
+
+// ============================
 // Fade-in on scroll
 // ============================
 const fadeEls = document.querySelectorAll('.fade-in');
