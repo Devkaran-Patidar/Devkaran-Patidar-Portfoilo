@@ -7,8 +7,8 @@ const projectsData = [
     title: "Agromart Platform",
     description: "Direct market access for farmers and consumers. A comprehensive full-stack solution allowing seamless transactions, produce tracking, and secure authentication to bridge the gap in agricultural commerce.",
     tech: ["React", "Django", "JWT", "Cloudinary", "PostgreSQL"],
-    mediaType: "image",
-    mediaSrc: "./Images/Projects/images/agromart.png",
+    mediaType: "video",
+    mediaSrc: "https://res.cloudinary.com/dmfrenu9q/video/upload/v1786631104/agromart_0.1_v03igc.mp4",
     liveUrl: "https://agromart-ad69.onrender.com/",
     sourceUrl: "https://github.com/Devkaran-Patidar/FarmerApp-Frontend"
   },
@@ -17,21 +17,21 @@ const projectsData = [
     title: "Premium Algorithm Visualizer",
     description: "A sophisticated tool for visualizing and analyzing algorithms in real-time, providing insights into their performance and behavior.",
     tech: ["React", "ReCharts", "Django", "REST API"],
-    mediaType: "image",
-    mediaSrc: "./Images/Projects/images/algoanalyzer.png",
+    mediaType: "video",
+    mediaSrc: "https://res.cloudinary.com/dmfrenu9q/video/upload/v1786630983/algo_analyzer0.1_zltequ.mp4",
     liveUrl: "https://news-app-example.onrender.com/",
     sourceUrl: "https://github.com/Devkaran-Patidar/AlgoAnalyzer"
   },
-  // {
-  //   type: "AI Chatbot",
-  //   title: "Smart AI Assistant",
-  //   description: "A conversational AI chatbot built with React and integrated with a powerful backend for natural language processing.",
-  //   tech: ["React", "Django", "REST API"],
-  //   mediaType: "image",
-  //   mediaSrc: "./Images/Projects/images/aichatbot.png",
-  //   liveUrl: "https://news-app-example.onrender.com/",
-  //   sourceUrl: "https://github.com/Devkaran-Patidar/AlgoAnalyzer"
-  // },
+  {
+    type: "AI Chatbot",
+    title: "Smart AI Assistant",
+    description: "A conversational AI chatbot built with React and integrated with a powerful backend for natural language processing.",
+    tech: ["React", "ReCharts", "Django", "REST API"],
+    mediaType: "video",
+    mediaSrc: "https://res.cloudinary.com/dmfrenu9q/video/upload/v1786631321/Screen_Recording_2026-08-10_213531_rswqsm.mp4",
+    liveUrl: "https://news-app-example.onrender.com/",
+    sourceUrl: "https://github.com/Devkaran-Patidar/AlgoAnalyzer"
+  },
   {
     type: "Frontend Application",
     title: "Global News Aggregator",
