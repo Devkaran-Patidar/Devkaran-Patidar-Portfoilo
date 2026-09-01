@@ -8,7 +8,7 @@ const projectsData = [
     description: "Direct market access for farmers and consumers. A comprehensive full-stack solution allowing seamless transactions, produce tracking, and secure authentication to bridge the gap in agricultural commerce.",
     tech: ["React", "Django", "JWT", "Cloudinary", "PostgreSQL"],
     mediaList: [
-      { type: "video", src: "https://res.cloudinary.com/dmfrenu9q/video/upload/v1786631104/agromart_0.1_v03igc.mp4" },
+      { type: "video",src: "https://www.youtube.com/embed/giVrQThTfzI?si=VYmVmdcs50VqYdrE&autoplay=1"},
       { type: "image", src: "../images/Projects/agromart/Screenshot (838).png" },
       // { type: "image", src: "../images/Projects/agromart/Screenshot (839).png" },
       // { type: "image", src: "../images/Projects/agromart/Screenshot (840).png" },
@@ -73,6 +73,32 @@ const projectsData = [
 
 const projectsContainer = document.getElementById("projects-container");
 
+function buildVideoMarkup(src, className, options = {}) {
+  const {
+    autoplay = false,
+    muted = false,
+    controls = false,
+    loop = false,
+    thumbnail = false,
+  } = options;
+
+  const isYouTube = /youtube\.com\/embed\//i.test(src) || /youtu\.be\//i.test(src);
+
+  if (isYouTube) {
+    const separator = src.includes('?') ? '&' : '?';
+    const youtubeSrc = `${src}${separator}autoplay=${autoplay ? 1 : 0}&mute=${muted ? 1 : 0}&controls=${controls ? 1 : 0}&playsinline=1`;
+
+    return `<iframe src="${youtubeSrc}" class="${className}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ${thumbnail ? '' : 'loading="lazy"'}></iframe>`;
+  }
+
+  const autoplayAttr = autoplay ? 'autoplay' : '';
+  const mutedAttr = muted ? 'muted' : '';
+  const controlsAttr = controls ? 'controls' : '';
+  const loopAttr = loop ? 'loop' : '';
+
+  return `<video class="${className}" ${autoplayAttr} ${mutedAttr} ${controlsAttr} ${loopAttr} playsinline preload="metadata"><source src="${src}" type="video/mp4"></video>`;
+}
+
 if (projectsContainer) {
   let projectsHTML = "";
   projectsData.forEach((project, index) => {
@@ -84,10 +110,10 @@ if (projectsContainer) {
     let thumbnailsHTML = "";
     
     project.mediaList.forEach((media, mIndex) => {
-      let mediaContent = media.type === "video" 
-        ? `<video src="${media.src}" class="project-img" muted loop autoplay playsinline></video>`
+      let mediaContent = media.type === "video"
+        ? buildVideoMarkup(media.src, "project-img", { autoplay: true, muted: true, controls: false, loop: true, thumbnail: false })
         : `<img src="${media.src}" alt="${project.title} - ${mIndex + 1}" class="project-img" loading="lazy">`;
-      
+
       sliderTracks += `
         <div class="slider-slide" data-index="${mIndex}">
           ${mediaContent}
@@ -99,7 +125,7 @@ if (projectsContainer) {
 
       // Small thumbnail
       let thumbContent = media.type === "video"
-        ? `<div class="thumb-video-icon"><i class="fa-solid fa-play"></i></div><video src="${media.src}" class="thumb-img" muted></video>`
+        ? `<div class="thumb-video-icon"><i class="fa-solid fa-play"></i></div>${buildVideoMarkup(media.src, "thumb-img", { autoplay: false, muted: true, controls: false, loop: true, thumbnail: true })}`
         : `<img src="${media.src}" class="thumb-img">`;
       
       thumbnailsHTML += `
@@ -219,9 +245,14 @@ window.closeLightbox = function() {
 function updateLightboxMedia() {
   const media = projectsData[currentLbProj].mediaList[currentLbMedia];
   const mediaContainer = document.getElementById('lb-media');
-  
+
   if (media.type === 'video') {
-    mediaContainer.innerHTML = `<video src="${media.src}" controls autoplay class="lightbox-img"></video>`;
+    mediaContainer.innerHTML = buildVideoMarkup(media.src, 'lightbox-img lightbox-video', {
+      autoplay: true,
+      muted: true,
+      controls: true,
+      loop: true
+    });
   } else {
     mediaContainer.innerHTML = `<img src="${media.src}" class="lightbox-img">`;
   }
