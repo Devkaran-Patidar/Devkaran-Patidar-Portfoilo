@@ -8,7 +8,7 @@ const projectsData = [
     description: "Direct market access for farmers and consumers. A comprehensive full-stack solution allowing seamless transactions, produce tracking, and secure authentication to bridge the gap in agricultural commerce.",
     tech: ["React", "Django", "JWT", "Cloudinary", "PostgreSQL"],
     mediaList: [
-      { type: "video", src: "https://www.youtube.com/embed/giVrQThTfzI?si=VYmVmdcs50VqYdrE&autoplay=1" },
+      { type: "video", src: "https://www.youtube.com/embed/0QvvNunzhP4?autoplay=1&rel=0" },
       { type: "image", src: "./Images/Projects/agromart/Screenshot (838).png" },
       { type: "image", src: "./Images/Projects/agromart/Screenshot (839).png" },
       { type: "image", src: "./Images/Projects/agromart/Screenshot (840).png" },
@@ -27,11 +27,21 @@ const projectsData = [
     description: "A sophisticated tool for visualizing and analyzing sorting and searching algorithms in real-time, providing deep insights into computational complexity, step execution, and data performance.",
     tech: ["React", "ReCharts", "JavaScript", "Algorithms", "CSS3"],
     mediaList: [
-      { type: "video", src: "https://res.cloudinary.com/dmfrenu9q/video/upload/v1786630983/algo_analyzer0.1_zltequ.mp4" },
-      { type: "image", src: "./Images/Projects/images/agromart.png" }
-    ],
+      { type: "video", src: "https://www.youtube.com/embed/ToQgRJv4M7w?autoplay=1&rel=0" },
+      { type: "image", src: "./Images/Projects/images/image.png" }],
     liveUrl: "https://github.com/Devkaran-Patidar/AlgoAnalyzer",
     sourceUrl: "https://github.com/Devkaran-Patidar/AlgoAnalyzer"
+  },
+  {
+    type: "Air Piano",
+    title: "Play piano Music in the Air",
+    description: "An innovative musical experience that allows users to play piano notes in the air using  hand gestures and motion detection.",
+    tech: ["React", "TensorFlow.js","openCV", "JavaScript", "CSS3"],
+    mediaList: [
+      { type: "video", src: "https://www.youtube.com/embed/l3LkXYQY5uU?autoplay=1&rel=0" }
+    ],
+    liveUrl: "https://github.com/Devkaran-Patidar/DataDashboard",
+    sourceUrl: "https://github.com/Devkaran-Patidar/DataDashboard"
   },
   {
     type: "AI Chatbot",
@@ -40,7 +50,6 @@ const projectsData = [
     tech: ["React", "Python", "OpenAI API", "Django", "REST API"],
     mediaList: [
       { type: "video", src: "https://res.cloudinary.com/dmfrenu9q/video/upload/v1786631321/Screen_Recording_2026-08-10_213531_rswqsm.mp4" },
-      { type: "image", src: "./Images/Projects/images/image.png" }
     ],
     liveUrl: "https://github.com/Devkaran-Patidar",
     sourceUrl: "https://github.com/Devkaran-Patidar"
