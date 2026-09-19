@@ -28,7 +28,10 @@ const projectsData = [
     tech: ["React", "ReCharts", "JavaScript", "Algorithms", "CSS3"],
     mediaList: [
       { type: "video", src: "https://www.youtube.com/embed/ToQgRJv4M7w?autoplay=1&rel=0" },
-      { type: "image", src: "./Images/Projects/images/image.png" }],
+      { type: "image", src: "./Images/Projects/algo_visualizer/Screenshot1.png" },
+      { type: "image", src: "./Images/Projects/algo_visualizer/Screenshot2.png" },
+      { type: "image", src: "./Images/Projects/algo_visualizer/Screenshot3.png" }
+    ],
     liveUrl: "https://github.com/Devkaran-Patidar/AlgoAnalyzer",
     sourceUrl: "https://github.com/Devkaran-Patidar/AlgoAnalyzer"
   },
@@ -38,18 +41,20 @@ const projectsData = [
     description: "An innovative musical experience that allows users to play piano notes in the air using  hand gestures and motion detection.",
     tech: ["React", "TensorFlow.js","openCV", "JavaScript", "CSS3"],
     mediaList: [
-      { type: "video", src: "https://www.youtube.com/embed/l3LkXYQY5uU?autoplay=1&rel=0" }
+      { type: "video", src: "https://www.youtube.com/embed/l3LkXYQY5uU?autoplay=1&rel=0" },
     ],
     liveUrl: "https://github.com/Devkaran-Patidar/DataDashboard",
     sourceUrl: "https://github.com/Devkaran-Patidar/DataDashboard"
   },
   {
     type: "AI Chatbot",
-    title: "Smart AI Assistant",
+    title: "Agrisure AI Assistant",
     description: "A conversational AI assistant built with React and integrated with backend natural language processing. Supports real-time text streaming, context retention, and custom prompt workflows.",
-    tech: ["React", "Python", "OpenAI API", "Django", "REST API"],
+    tech: ["React", "Python", "OpenAI API", "FastAPI", "GemminiApi"],
     mediaList: [
       { type: "video", src: "https://res.cloudinary.com/dmfrenu9q/video/upload/v1786631321/Screen_Recording_2026-08-10_213531_rswqsm.mp4" },
+      { type: "image", src: "./images/Projects/chatboat/chatboat1.png" },
+      { type: "image", src: "./images/Projects/chatboat/chatboat2.png" },
     ],
     liveUrl: "https://github.com/Devkaran-Patidar",
     sourceUrl: "https://github.com/Devkaran-Patidar"
