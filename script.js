@@ -1,12 +1,13 @@
 // ============================
 // Dynamic Projects Rendering
 // ============================
+
 const projectsData = [
   {
-    type: "Full Stack Web App",
-    title: "Agromart Platform",
+    type: "Full-Stack Agricultural Marketplace",
+    title: "Agromart - Farm-to-Consumer Marketplace",
     description: "Direct market access for farmers and consumers. A comprehensive full-stack solution allowing seamless transactions, produce tracking, and secure authentication to bridge the gap in agricultural commerce.",
-    tech: ["React", "Django", "JWT", "Cloudinary", "PostgreSQL"],
+    tech: ["React", "Django","restAPI", "JWT", "Cloudinary", "PostgreSQL"],
     mediaList: [
       { type: "video", src: "https://www.youtube.com/embed/0QvvNunzhP4?autoplay=1&rel=0" },
       { type: "image", src: "./Images/Projects/agromart/Screenshot (838).png" },
@@ -22,10 +23,10 @@ const projectsData = [
     sourceUrl: "https://github.com/Devkaran-Patidar/FarmerApp-Frontend"
   },
   {
-    type: "Algo Analyzer",
-    title: "Premium Algorithm Visualizer",
+    type: "Algorithm Visualization Tool",
+    title: "Algo Analyzer - Real-Time Algorithm Visualizer",
     description: "A sophisticated tool for visualizing and analyzing sorting and searching algorithms in real-time, providing deep insights into computational complexity, step execution, and data performance.",
-    tech: ["React", "ReCharts", "JavaScript", "Algorithms", "CSS3"],
+    tech: ["React", "ReCharts","restAPI","Django", "Algorithms", "tailwindCSS"],
     mediaList: [
       { type: "video", src: "https://www.youtube.com/embed/ToQgRJv4M7w?autoplay=1&rel=0" },
       { type: "image", src: "./Images/Projects/algo_visualizer/Screenshot1.png" },
@@ -36,8 +37,8 @@ const projectsData = [
     sourceUrl: "https://github.com/Devkaran-Patidar/AlgoAnalyzer"
   },
   {
-    type: "Air Piano",
-    title: "Play piano Music in the Air",
+    type: "AI Gesture-Controlled Music App",
+    title: "Air Piano - Play Piano with Hand Gestures",
     description: "An innovative musical experience that allows users to play piano notes in the air using  hand gestures and motion detection.",
     tech: ["React", "TensorFlow.js","openCV", "JavaScript", "CSS3"],
     mediaList: [
@@ -47,10 +48,10 @@ const projectsData = [
     sourceUrl: "https://github.com/Devkaran-Patidar/DataDashboard"
   },
   {
-    type: "AI Chatbot",
-    title: "Agrisure AI Assistant",
-    description: "A conversational AI assistant built with React and integrated with backend natural language processing. Supports real-time text streaming, context retention, and custom prompt workflows.",
-    tech: ["React", "Python", "OpenAI API", "FastAPI", "GemminiApi"],
+    type: "Agricultural AI Chatbot",
+    title: "Agrisure - AI Farming Assistant",
+    description: "An AI-powered chatbot designed to assist users with agricultural queries, providing instant responses and guidance on farming practices, crop management, and market trends.",
+    tech: ["HTML5","javascript","CSS3", "Python", "FastAPI", "Gemini Api"],
     mediaList: [
       { type: "video", src: "https://res.cloudinary.com/dmfrenu9q/video/upload/v1786631321/Screen_Recording_2026-08-10_213531_rswqsm.mp4" },
       { type: "image", src: "./images/Projects/chatboat/chatboat1.png" },
@@ -60,8 +61,8 @@ const projectsData = [
     sourceUrl: "https://github.com/Devkaran-Patidar"
   },
   {
-    type: "Frontend Application",
-    title: "Global News Aggregator",
+    type: "News Aggregator Web App",
+    title: "Global News Aggregator - Live Search & Filters",
     description: "A dynamic news application that fetches and displays the latest articles from multiple global sources. Features category filtering, live search, and a responsive reading experience.",
     tech: ["HTML5", "CSS3", "JavaScript", "REST API"],
     mediaList: [
@@ -70,17 +71,17 @@ const projectsData = [
     liveUrl: "https://github.com/Devkaran-Patidar/NewsApp",
     sourceUrl: "https://github.com/Devkaran-Patidar/NewsApp"
   },
-  {
-    type: "Web Game",
-    title: "Interactive Tic-Tac-Toe",
-    description: "A classic Tic Tac Toe game with modern UI elements, smooth transitions, and turn indicators implemented with vanilla web technologies. Focuses on clean state management and interactive logic.",
-    tech: ["HTML5", "CSS3", "Vanilla JS"],
-    mediaList: [
-      { type: "image", src: "./Images/Projects/images/tic toc toe.png" }
-    ],
-    liveUrl: "https://github.com/Devkaran-Patidar",
-    sourceUrl: "https://github.com/Devkaran-Patidar"
-  }
+  // {
+  //   type: "Vanilla JS Web Game",
+  //   title: "Modern Tic-Tac-Toe Game",
+  //   description: "A classic Tic Tac Toe game with modern UI elements, smooth transitions, and turn indicators implemented with vanilla web technologies. Focuses on clean state management and interactive logic.",
+  //   tech: ["HTML5", "CSS3", "Vanilla JS"],
+  //   mediaList: [
+  //     { type: "image", src: "./Images/Projects/images/tic toc toe.png" }
+  //   ],
+  //   liveUrl: "https://github.com/Devkaran-Patidar",
+  //   sourceUrl: "https://github.com/Devkaran-Patidar"
+  // }
 ];
 
 const projectsContainer = document.getElementById("projects-container");
