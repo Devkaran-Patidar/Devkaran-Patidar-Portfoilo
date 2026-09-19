@@ -28,7 +28,7 @@ const projectsData = [
     description: "A sophisticated tool for visualizing and analyzing sorting and searching algorithms in real-time, providing deep insights into computational complexity, step execution, and data performance.",
     tech: ["React", "ReCharts","restAPI","Django", "Algorithms", "tailwindCSS"],
     mediaList: [
-      { type: "video", src: "https://www.youtube.com/embed/ToQgRJv4M7w?autoplay=1&rel=0" },
+      { type: "video", src: "https://www.youtube.com/embed/lR_ujmWE5ws?autoplay=1&rel=0" },
       { type: "image", src: "./Images/Projects/algo_visualizer/Screenshot1.png" },
       { type: "image", src: "./Images/Projects/algo_visualizer/Screenshot2.png" },
       { type: "image", src: "./Images/Projects/algo_visualizer/Screenshot3.png" }
