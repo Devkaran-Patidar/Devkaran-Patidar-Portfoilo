@@ -48,6 +48,21 @@ const projectsData = [
     sourceUrl: "https://github.com/Devkaran-Patidar/DataDashboard"
   },
   {
+    type: "Full-Stack Machine Learning Web Application",
+    title: "PhishGuard - Phishing Detection Platform",
+    description: "A comprehensive web application that leverages machine learning to detect whether a URL is Legitimate, Suspicious, or Phishing using a machine-learning model.",
+    tech: ['React', 'Tailwind CSS', 'Recharts', 'Axios','FastAPI', 'Uvicorn', 'Pydantic', 'scikit-learn', 'NumPy', 'Joblib', 'Motor','mongoDB'],
+    mediaList: [
+      { type: "video", src: "https://www.youtube.com/embed/V34LW3EhNGg?autoplay=1&rel=0" },
+      { type: "image", src: "./Images/Projects/phishing/pg1.png" },
+      { type: "image", src: "./Images/Projects/phishing/pg2.png" },
+      { type: "image", src: "./Images/Projects/phishing/pg3.png" },
+      { type: "image", src: "./Images/Projects/phishing/pg4.png" },
+    ],
+    liveUrl: "https://github.com/Devkaran-Patidar",
+    sourceUrl: "https://github.com/Devkaran-Patidar"
+  },
+  {
     type: "Agricultural AI Chatbot",
     title: "Agrisure - AI Farming Assistant",
     description: "An AI-powered chatbot designed to assist users with agricultural queries, providing instant responses and guidance on farming practices, crop management, and market trends.",
