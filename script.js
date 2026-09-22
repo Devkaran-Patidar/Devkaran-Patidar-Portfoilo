@@ -310,6 +310,117 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ============================
+// Typed role text in hero
+// ============================
+const typedRoleEl = document.getElementById('typedRole');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (typedRoleEl && !prefersReducedMotion) {
+  const roles = [
+    "Python Full Stack Developer.",
+    "Django & React Builder.",
+    "Problem Solver on LeetCode.",
+    "Still Learning, Still Shipping."
+  ];
+  let roleIndex = 0;
+  let charIndex = roles[0].length;
+  let isDeleting = false;
+
+  function typeLoop() {
+    const current = roles[roleIndex];
+    if (isDeleting) {
+      charIndex--;
+    } else {
+      charIndex++;
+    }
+    typedRoleEl.textContent = current.slice(0, charIndex);
+
+    let delay = isDeleting ? 35 : 55;
+
+    if (!isDeleting && charIndex === current.length) {
+      delay = 1800;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      delay = 400;
+    }
+    setTimeout(typeLoop, delay);
+  }
+  setTimeout(typeLoop, 1800);
+}
+
+// ============================
+// Animated stat counters
+// ============================
+const statNumbers = document.querySelectorAll('.stat-number');
+
+// Keep the "Projects Built" stat in sync with the actual project list
+const projectsStat = document.querySelector('.stat-card:nth-child(1) .stat-number');
+if (projectsStat && typeof projectsData !== 'undefined') {
+  projectsStat.setAttribute('data-target', projectsData.length);
+}
+// Keep the "Technologies Explored" stat in sync with unique tech tags used
+const techStat = document.querySelector('.stat-card:nth-child(2) .stat-number');
+if (techStat && typeof projectsData !== 'undefined') {
+  const uniqueTech = new Set();
+  projectsData.forEach(p => p.tech.forEach(t => uniqueTech.add(t.toLowerCase())));
+  techStat.setAttribute('data-target', uniqueTech.size);
+}
+
+function animateCounter(el) {
+  const target = parseFloat(el.getAttribute('data-target')) || 0;
+  const suffix = el.getAttribute('data-suffix') || '';
+  const duration = 1400;
+  const start = performance.now();
+
+  function step(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.round(target * eased);
+    el.textContent = value + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      statObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.4 });
+
+statNumbers.forEach(el => statObserver.observe(el));
+
+// ============================
+// Scroll progress bar
+// ============================
+const scrollProgressEl = document.getElementById('scrollProgress');
+if (scrollProgressEl) {
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgressEl.style.width = pct + '%';
+  }, { passive: true });
+}
+
+// ============================
+// Cursor glow (desktop only)
+// ============================
+const cursorGlowEl = document.getElementById('cursorGlow');
+if (cursorGlowEl && window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion) {
+  window.addEventListener('mousemove', (e) => {
+    cursorGlowEl.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+    cursorGlowEl.classList.add('active');
+  }, { passive: true });
+  document.addEventListener('mouseleave', () => cursorGlowEl.classList.remove('active'));
+}
+
+// ============================
 // Fade-in on scroll
 // ============================
 const fadeObserver = new IntersectionObserver((entries) => {
@@ -398,4 +509,3 @@ if (contactForm) {
     }, 2500);
   });
 }
-
