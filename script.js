@@ -5,7 +5,7 @@
 const projectsData = [
   {
     type: "Full-Stack Agricultural Marketplace",
-    title: "Agromart - Farm-to-Consumer Marketplace",
+    title: "Agromart - Farmer-to-Consumer Marketplace",
     description: "Direct market access for farmers and consumers. A comprehensive full-stack solution allowing seamless transactions, produce tracking, and secure authentication to bridge the gap in agricultural commerce.",
     tech: ["React", "Django","restAPI", "JWT", "Cloudinary", "PostgreSQL"],
     mediaList: [
@@ -64,7 +64,7 @@ const projectsData = [
   },
   {
     type: "Agricultural AI Chatbot",
-    title: "Agrisure - AI Farming Assistant",
+    title: "Agrisure - AI Assistant",
     description: "An AI-powered chatbot designed to assist users with agricultural queries, providing instant responses and guidance on farming practices, crop management, and market trends.",
     tech: ["HTML5","javascript","CSS3", "Python", "FastAPI", "Gemini Api"],
     mediaList: [
@@ -75,17 +75,17 @@ const projectsData = [
     liveUrl: "https://github.com/Devkaran-Patidar",
     sourceUrl: "https://github.com/Devkaran-Patidar"
   },
-  {
-    type: "News Aggregator Web App",
-    title: "Global News Aggregator - Live Search & Filters",
-    description: "A dynamic news application that fetches and displays the latest articles from multiple global sources. Features category filtering, live search, and a responsive reading experience.",
-    tech: ["HTML5", "CSS3", "JavaScript", "REST API"],
-    mediaList: [
-      { type: "image", src: "./Images/Projects/images/newsApp.png" }
-    ],
-    liveUrl: "https://github.com/Devkaran-Patidar/NewsApp",
-    sourceUrl: "https://github.com/Devkaran-Patidar/NewsApp"
-  },
+  // {
+  //   type: "News Aggregator Web App",
+  //   title: "Global News Aggregator - Live Search & Filters",
+  //   description: "A dynamic news application that fetches and displays the latest articles from multiple global sources. Features category filtering, live search, and a responsive reading experience.",
+  //   tech: ["HTML5", "CSS3", "JavaScript", "REST API"],
+  //   mediaList: [
+  //     { type: "image", src: "./Images/Projects/images/newsApp.png" }
+  //   ],
+  //   liveUrl: "https://github.com/Devkaran-Patidar/NewsApp",
+  //   sourceUrl: "https://github.com/Devkaran-Patidar/NewsApp"
+  // },
   // {
   //   type: "Vanilla JS Web Game",
   //   title: "Modern Tic-Tac-Toe Game",
